@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songs:
-  - {fileID: 8300000, guid: 9952d8b8bea9c471b850d8c095082644, type: 3}
+  - {fileID: 8300000, guid: 6ecf418cf3f30496aa7243ac29e27a3c, type: 3}
+  - {fileID: 8300000, guid: db321bec2af8647bd81a4be972e1bfb6, type: 3}
+  - {fileID: 8300000, guid: 937473fec8a5c433e97cec095aaaa098, type: 3}
+  - {fileID: 8300000, guid: a1745c703825f4a3da2648e8eaa28927, type: 3}
   - {fileID: 8300000, guid: db8a1027131534e81b161d22414fe856, type: 3}
-  - {fileID: 8300000, guid: 8fa84872023814db1977497fffffe7d0, type: 3}
   volumeSlider: {fileID: 0}
   buttonClickSound: {fileID: 8300000, guid: 896ba67d983c64d77a72edb32ab3dafc, type: 3}
   buttonClickVolume: 0.5
@@ -56,4 +58,4 @@ MonoBehaviour:
   winGameSound: {fileID: 8300000, guid: 1572491a1d59e406e94c4699daec9ac4, type: 3}
   winGameVolume: 0.5
   drawGameSound: {fileID: 8300000, guid: 0e92b696d3e5a4837bd4a03a58d4ecff, type: 3}
-  drawGamneVolume: 0.5
+  drawGameVolume: 0.5
