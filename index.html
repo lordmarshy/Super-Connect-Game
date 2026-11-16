@@ -87,25 +87,19 @@
       // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
       // expected to change.
 
+      // The canvas is sized by TemplateData/style.css to fit the available
+      // space at 16:10, on desktop and mobile alike.
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
+      }
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+      // Hide the fullscreen button when fullscreen isn't allowed (e.g. in an
+      // iframe without allow="fullscreen"), so it never sits there doing nothing.
+      if (!document.fullscreenEnabled && !document.webkitFullscreenEnabled) {
+        document.querySelector("#unity-footer").style.display = "none";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
