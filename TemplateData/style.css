@@ -1,4 +1,4 @@
-html, body { height: 100%; padding: 0; margin: 0; background: #06110f; overflow: hidden }
+html, body { height: 100%; padding: 0; margin: 0; background: transparent; color-scheme: dark; overflow: hidden }
 #unity-container { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center }
 /* Fit the 16:10 game canvas inside whatever space the page (or iframe) gives us. */
 #unity-canvas { background: #231F20; display: block; width: min(100vw, 160vh); height: min(100vh, 62.5vw) }
