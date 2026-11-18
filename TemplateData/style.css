@@ -1,14 +1,13 @@
+/* Super Connect WebGL template: the canvas fills whatever page/iframe it is in. */
 html, body { height: 100%; padding: 0; margin: 0; background: transparent; color-scheme: dark; overflow: hidden }
-#unity-container { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center }
-/* Fit the 16:10 game canvas inside whatever space the page (or iframe) gives us. */
-#unity-canvas { background: #231F20; display: block; width: min(100vw, 160vh); height: min(100vh, 62.5vw) }
+#unity-container { position: fixed; inset: 0 }
+#unity-canvas { display: block; width: 100%; height: 100%; background: #314D79 }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
 #unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
 #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
 #unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
-/* Unity logo + title footer removed; only a small fullscreen button overlays the canvas. */
+/* Footer bar removed; only a small fullscreen button overlays the canvas. */
 #unity-footer { position: absolute; right: 8px; bottom: 8px; z-index: 2 }
-#unity-logo-title-footer, #unity-build-title { display: none }
 #unity-fullscreen-button { cursor: pointer; width: 38px; height: 38px; border-radius: 6px; opacity: 0.7; background: url('fullscreen-button.png') no-repeat center; transition: opacity 0.15s }
 #unity-fullscreen-button:hover { opacity: 1 }
-#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none; z-index: 3 }
